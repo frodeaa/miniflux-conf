@@ -1,0 +1,12 @@
+[Service]
+ExecStart=/usr/local/bin/miniflux
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=miniflux
+User=miniflux
+Group=miniflux
+Environment=DATABASE_URL=postgres://<user>:<pass>@<origin>/<database>?sslmode=disable
+
+[Install]
+WantedBy=multi-user.target
