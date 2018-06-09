@@ -1,4 +1,6 @@
 [Service]
+After=postgresql.service
+Require=postgresql.service
 ExecStartPre=/usr/local/bin/miniflux -migrate
 ExecStart=/usr/local/bin/miniflux
 Restart=always
