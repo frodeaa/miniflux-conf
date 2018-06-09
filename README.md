@@ -4,20 +4,23 @@ A collection of useful miniflux configuration snippets
 with simple scripts to manage install and upgrade of
 miniflux
 
-## Run miniflux with systemd
+**NOTE** installs miniflux for linux armv7
 
-Copy the miniflux.service to the systemd system folder
-and configure the DATABASE_URL to use with systemclt edit.
+## Prerequisite
 
-    cp system/miniflux.service /etc/systemd/system/
+install postgresql, create user and database and create
+the extension hstore as superuser
 
-    # configure
-    systemctl edit miniflux
+    apt install postgresql
+    createuser -P miniflux
+    createdb -O miniflux miniflux
+    psql miniflux -c 'create extension hstore'
 
-    [Service]
-    Environment="DATABASE_URL=postgres://<user>:<pass>@<origin>/<database>?sslmode=disable"
+## Install miniflux
 
-Run `systemctl enable` to tell systemd to start miniflux automatically
-at boot.
+run the `install.sh` script to install latest version of miniflux
 
-    systemctl enable miniflux.service
+## Upgrade miniflux
+
+Use the `upgrade.sh` script to upgrade existing miniflux to
+latest released version.
