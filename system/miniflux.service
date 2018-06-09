@@ -7,7 +7,6 @@ StandardError=syslog
 SyslogIdentifier=miniflux
 User=miniflux
 Group=miniflux
-Environment=DATABASE_URL=postgres://<user>:<pass>@<origin>/<database>?sslmode=disable
 
 [Install]
 WantedBy=multi-user.target
