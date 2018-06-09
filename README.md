@@ -17,7 +17,7 @@ and configure the DATABASE_URL to use with systemclt edit.
     [Service]
     Environment="DATABASE_URL=postgres://<user>:<pass>@<origin>/<database>?sslmode=disable"
 
-Run `systemctl enable` to tell systemd to stert miniflux automatically
+Run `systemctl enable` to tell systemd to start miniflux automatically
 at boot.
 
     systemctl enable miniflux.service
