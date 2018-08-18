@@ -18,9 +18,9 @@ the extension hstore as superuser
 
 ## Install miniflux
 
-run the `install.sh` script to install latest version of miniflux
+run the `bin/install.sh` script to install latest version of miniflux
 
 ## Upgrade miniflux
 
-Use the `upgrade.sh` script to upgrade existing miniflux to
+Use the `bin/upgrade.sh` script to upgrade existing miniflux to
 latest released version.
